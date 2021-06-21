@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('title')
-Корзина
+    Корзина
 @endsection
 
 @section('content')

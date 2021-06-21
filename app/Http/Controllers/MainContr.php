@@ -33,10 +33,12 @@ class MainContr extends Controller
         $categories=Cotegory::get();
         return view('categories',compact('categories', 'products'));
     }
+
     public function category($code)
     {
         $category=Cotegory::where('code',$code)->first();
         $products=Product::where('category_id', $category->id)->get();
         return view('category', compact('category', 'products'));
     }
+
 }
