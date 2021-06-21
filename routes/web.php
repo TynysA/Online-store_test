@@ -15,11 +15,10 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', 'MainContr@index')->name('index');
 Route::get('/categories', 'MainContr@categories')->name('categories');
 Route::get('/heart', 'MainContr@heart')->name('heart');
+Route::get('/cart', 'MainContr@cart')->name('cart');
 Route::get('/{category}', 'MainContr@category')->name('category');
 Route::get('/{category}/{itemName?}', 'MainContr@item')->name('product');
 //cart
-Route::get('/cart', function () {
-    return view('cart');
-});
+
 Route::get('/order', 'BasketController@cartPlace')->name('order');
 Route::post('/cart/add/{id}', 'BasketController@cartAdd')->name('cartAdd');

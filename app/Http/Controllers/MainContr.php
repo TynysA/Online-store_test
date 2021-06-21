@@ -17,7 +17,6 @@ class MainContr extends Controller
     {
         return view('cart');
     }
-
     public function heart()
     {
         return view('heart');
